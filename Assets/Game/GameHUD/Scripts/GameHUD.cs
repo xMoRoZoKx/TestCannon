@@ -27,12 +27,12 @@ public class GameHUD : WindowBase
 
         connections += touchBar.OnMoveX.Subscribe(value =>
         {
-            cannon.BodyView.transform.Rotate(Vector3.up, value * sensative);
+            cannon.RotateBody(value * sensative);
         });
 
         connections += touchBar.OnMoveY.Subscribe(value =>
         {
-            cannon.TrunkView.transform.Rotate(Vector3.right, -value * sensative);
+            cannon.RotateTrunk(-value * sensative);
         });
 
         connections += touchBar.OnPress.Subscribe(isPressed =>
