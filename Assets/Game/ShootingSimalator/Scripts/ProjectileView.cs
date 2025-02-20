@@ -6,7 +6,7 @@ public class ProjectileView : MonoBehaviour
 {
     public const float Gravity = 9.81f;
     public const float Drag = 0.98f;
-    private const float TimeStep = 0.02f;
+    private const float TimeStep = 0.015f;
     private const float EnergyLossOnRebound = 0.8f;
 
     [SerializeField] private MeshFilter meshFilter;
